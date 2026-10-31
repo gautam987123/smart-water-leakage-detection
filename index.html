@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Water Leakage Detection</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>💧 Smart Water Leakage Detection</h1>
+  <p>Building Water Monitoring Dashboard</p>
+</header>
+
+<main>
+  <section class="controls">
+    <button id="btnNormal" class="btn green">✔ Simulate Normal Usage</button>
+    <button id="btnLeak" class="btn red">⚠ Simulate Water Leakage</button>
+    <button id="btnReset" class="btn grey">↺ Reset</button>
+  </section>
+
+  <div id="alertBox" class="alert hidden"></div>
+
+  <section class="cards">
+    <div class="card"><span class="icon">🚰</span><h3>Current Water Flow</h3><p id="cFlow" class="big">0 L/min</p></div>
+    <div class="card"><span class="icon">📊</span><h3>Today's Water Usage</h3><p id="cUsage" class="big">0 L</p></div>
+    <div class="card"><span class="icon">🌱</span><h3>Water Saved</h3><p id="cSaved" class="big">0 L</p><small id="cWasted"></small></div>
+    <div class="card" id="statusCard"><span class="icon">🛡️</span><h3>Leakage Status</h3><p id="cStatus" class="big">No Leakage</p></div>
+  </section>
+
+  <h2>Building Locations</h2>
+  <section id="locations" class="locations"></section>
+
+  <section class="panel">
+    <h2>Water Consumption (Live)</h2>
+    <canvas id="chart" width="900" height="280"></canvas>
+    <small>Each reading = total building flow (L/min). Red points = abnormal flow.</small>
+  </section>
+
+  <section class="panel">
+    <h2>How It Works</h2>
+    <div class="flow">
+      <div class="step">📡 Sensor Data</div><span>→</span>
+      <div class="step">⚙️ Processing</div><span>→</span>
+      <div class="step">🔍 Leakage Detection</div><span>→</span>
+      <div class="step">🔔 Dashboard Alert</div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Environmental Benefits</h2>
+    <ul class="benefits">
+      <li>💧 Reduces water wastage</li>
+      <li>⏱️ Detects leaks early</li>
+      <li>🌍 Saves water</li>
+      <li>💰 Reduces water bills</li>
+      <li>♻️ Supports sustainable water management</li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <h2>Simple System Architecture</h2>
+    <div class="arch">
+      <div>Water Flow Sensor</div><b>↓</b>
+      <div>Moisture Sensor</div><b>↓</b>
+      <div>Data Processing</div><b>↓</b>
+      <div>Leak Detection</div><b>↓</b>
+      <div>Web Dashboard</div><b>↓</b>
+      <div>User Alert</div>
+    </div>
+  </section>
+</main>
+
+<footer>EVS Assignment • Smart Water Leakage Detection and Monitoring System (Simulated Prototype)</footer>
+<script src="script.js"></script>
+</body>
+</html>
